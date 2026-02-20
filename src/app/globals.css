@@ -48,54 +48,71 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(10, 10, 10, 0.92);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(6, 6, 6, 0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 .nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: 68px;
 }
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--text);
   text-decoration: none;
 }
-.nav-logo { border-radius: 5px; display: block; }
-.nav-brand span { color: var(--blue); }
+.nav-logo {
+  display: block;
+  mix-blend-mode: lighten;
+}
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 36px;
 }
 .nav-link {
   font-size: 13px;
   color: var(--muted);
   text-decoration: none;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   transition: color 0.2s;
+  position: relative;
+  padding-bottom: 2px;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
 }
 .nav-link:hover { color: var(--text); }
+.nav-link:hover::after { transform: scaleX(1); }
 .nav-cta {
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 500;
   color: var(--blue);
-  border: 1px solid var(--blue);
-  padding: 7px 18px;
+  border: 1px solid rgba(37, 99, 235, 0.5);
+  padding: 9px 22px;
   border-radius: 4px;
   text-decoration: none;
   letter-spacing: 0.03em;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
-.nav-cta:hover { background: var(--blue); color: #fff; }
+.nav-cta:hover {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+  box-shadow: 0 0 16px rgba(37, 99, 235, 0.35);
+}
 
 /* ── Sections ───────────────────────────────────── */
 .section { padding: 100px 0; }
