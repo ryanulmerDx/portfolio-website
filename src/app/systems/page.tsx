@@ -9,51 +9,67 @@ const BOOKING_URL = "https://cal.com/ryan-ulmer-zbmuxk/discoverycall";
 
 const systems = [
   {
+    icon: "★",
+    category: "Reputation",
     name: "Google Review Automation",
     description:
-      "Automatically prompts satisfied customers to leave a Google review at the right moment — right after a positive experience is confirmed. The workflow detects the trigger (job completion, positive survey response, etc.), waits a short delay, then sends a personalized request with a direct review link. No manual follow-up required. Builds reputation on autopilot.",
+      "Automatically prompts satisfied customers to leave a Google review at the right moment — right after a positive experience is confirmed. The workflow detects the trigger, waits a short delay, then sends a personalized request with a direct review link. No manual follow-up required. Builds reputation on autopilot.",
     tags: ["n8n", "SMS / Email", "Google Business", "Webhooks"],
   },
   {
+    icon: "☎",
+    category: "Voice AI",
     name: "AI Receptionist System",
     description:
       "Full inbound call-handling system that answers, qualifies, and routes calls without a human. Handles common questions, checks availability, and books appointments. After-hours calls are processed and flagged for staff follow-up. Built for Rustic Mountain Dental and designed to deploy across any service business.",
     tags: ["n8n", "Twilio Voice", "OpenAI", "Firestore", "Google Calendar"],
   },
   {
+    icon: "↩",
+    category: "SMS",
     name: "Missed-Call Text-Back",
     description:
-      "When a caller hangs up without reaching anyone, this automation fires a text within seconds. Warm, immediate, and keeps the lead from going to a competitor. Simple to deploy, high-impact for any business that depends on inbound calls. Recovers a percentage of calls that would otherwise be permanently lost.",
+      "When a caller hangs up without reaching anyone, this automation fires a text within seconds. Warm, immediate, and keeps the lead from going to a competitor. Simple to deploy, high-impact for any business that depends on inbound calls. Recovers calls that would otherwise be permanently lost.",
     tags: ["n8n", "Twilio SMS", "Webhooks", "Phone Systems"],
   },
   {
+    icon: "◷",
+    category: "Scheduling",
     name: "Appointment Reminder Automations",
     description:
       "Configurable reminder sequences delivered via SMS and email before scheduled appointments. Timing, frequency, and messaging are set per client. The system detects confirmation replies and can trigger rescheduling flows when a client needs to change. Measurably reduces no-shows without any manual effort.",
     tags: ["n8n", "Twilio SMS", "Email", "Scheduling", "State Tracking"],
   },
   {
+    icon: "⟳",
+    category: "Sales",
     name: "Quote Follow-Up Sequences",
     description:
-      "Multi-step follow-up workflow that re-engages leads who received a quote but didn't respond. Triggers immediately after a quote is sent, then follows up at 24-hour and 72-hour intervals if no reply is detected. Firestore tracks state to prevent duplicate messages and halts the sequence the moment a real conversation begins.",
+      "Multi-step follow-up workflow that re-engages leads who received a quote but didn't respond. Triggers immediately after a quote is sent, then follows up at 24-hour and 72-hour intervals if no reply is detected. Firestore tracks state to prevent duplicates and halts the sequence the moment a conversation begins.",
     tags: ["n8n", "Twilio SMS", "Firestore", "State Tracking", "Multi-Step"],
   },
   {
+    icon: "⇄",
+    category: "Data Sync",
     name: "CRM + Google Calendar Sync",
     description:
       "Real-time two-way sync between a client's CRM and Google Calendar. New bookings, updates, and cancellations flow automatically between both systems in both directions. Eliminates double-entry, prevents scheduling conflicts, and keeps records accurate without anyone manually moving data.",
     tags: ["n8n", "CRM", "Google Calendar", "Webhooks", "Real-Time Sync"],
   },
   {
+    icon: "◎",
+    category: "Outbound",
     name: "Lead Generation System",
     description:
       "End-to-end outbound pipeline: Apollo for prospect sourcing, Google Sheets for validation and filtering, OpenAI for generating personalized opening lines, and Instantly for email sequencing. Runs on a daily schedule and processes hundreds of leads without manual input. Built and actively used for ReachFlow Studio's own outreach.",
     tags: ["n8n", "Apollo API", "OpenAI", "Google Sheets", "Instantly", "Email Sequences"],
   },
   {
+    icon: "▷",
+    category: "Internal",
     name: "Manus AI Project Kickoff Automation",
     description:
-      "Internal automation that fires when a new deal closes and scaffolds the entire project automatically. Spins up the standard folder structure, creates the project record in the internal system, populates onboarding documents, and sends the client their kickoff questionnaire. Every project starts consistently — nothing falls through during handoff.",
+      "Internal automation that fires when a new deal closes and scaffolds the entire project automatically. Spins up folder structure, creates the project record in the internal system, populates onboarding documents, and sends the client their kickoff questionnaire. Every project starts consistently — nothing falls through during handoff.",
     tags: ["n8n", "Internal Tooling", "Supabase", "Notion", "Onboarding"],
   },
 ];
@@ -79,6 +95,8 @@ export default function Systems() {
           <div className="systems-grid">
             {systems.map((s) => (
               <div key={s.name} className="system-card">
+                <span className="system-icon">{s.icon}</span>
+                <div className="system-category">{s.category}</div>
                 <h3>{s.name}</h3>
                 <p>{s.description}</p>
                 <div className="system-tags">

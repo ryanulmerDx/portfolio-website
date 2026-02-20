@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const BOOKING_URL = "https://cal.com/ryan-ulmer-zbmuxk/discoverycall";
 
 export default function Nav() {
@@ -6,6 +8,7 @@ export default function Nav() {
       <div className="container">
         <div className="nav-inner">
           <a href="/" className="nav-brand">
+            <Image src="/logo.png" alt="ReachFlow Studio" width={36} height={36} className="nav-logo" />
             ReachFlow<span>Studio</span>
           </a>
           <div className="nav-links">
