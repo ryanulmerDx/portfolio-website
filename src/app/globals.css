@@ -61,11 +61,26 @@ nav {
 .nav-brand {
   display: flex;
   align-items: center;
+  gap: 12px;
   text-decoration: none;
 }
 .nav-logo {
   display: block;
-  mix-blend-mode: lighten;
+  mix-blend-mode: screen;
+  flex-shrink: 0;
+}
+.nav-brand-text {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--text);
+  white-space: nowrap;
+}
+.nav-brand-text em {
+  font-style: normal;
+  color: var(--blue);
+  margin-left: 3px;
 }
 .nav-links {
   display: flex;

@@ -8,7 +8,8 @@ export default function Nav() {
       <div className="container">
         <div className="nav-inner">
           <a href="/" className="nav-brand">
-            <Image src="/logo.png" alt="ReachFlow Studio" width={48} height={48} className="nav-logo" />
+            <Image src="/logo.png" alt="" width={46} height={46} className="nav-logo" />
+            <span className="nav-brand-text">ReachFlow<em>Studio</em></span>
           </a>
           <div className="nav-links">
             <a href="/work" className="nav-link">Work</a>
