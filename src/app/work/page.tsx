@@ -21,28 +21,17 @@ const projects = [
   },
   {
     num: "02",
-    name: "Rustic Mountain Dental",
-    badge: "Healthcare · Website + AI System",
-    description: [
-      "Built two systems for this dental practice: a professional website and an AI receptionist that handles all inbound calls automatically. The AI system answers calls, qualifies callers, responds to common questions about services and insurance, and routes urgent cases directly to staff.",
-      "After-hours calls are handled without going to voicemail. The system collects caller information, logs everything, and sends staff alerts for anything that needs follow-up. No call falls through the cracks.",
-    ],
-    outcome: "Front desk call volume from routine inquiries dropped significantly. Missed calls effectively eliminated. Staff now focus on patients in the office, not the phone.",
-    tags: ["Next.js", "n8n", "Twilio Voice", "OpenAI", "Firestore", "Local SEO"],
-  },
-  {
-    num: "03",
     name: "Southwest Industrial",
     badge: "B2B · Industrial Services",
     description: [
-      "Built a professional website for an industrial services company after a three-month sales process — the first major closed deal for ReachFlow Studio. The brief was to make this company look as serious as their work is.",
+      "Built a professional website for an industrial services company. The brief was simple: make this company look as serious as their work is.",
       "Built for credibility, service clarity, and lead generation. Clean B2B presentation that communicates capability immediately to decision-makers who land from search or referral. Every section is designed to answer the question a buyer has before they move to the next one.",
     ],
     outcome: "A high-trust, high-conversion site that matches the company's level of professionalism and generates qualified inbound leads.",
     tags: ["Next.js", "B2B", "Lead Generation", "Service Pages", "SEO", "Contact Forms"],
   },
   {
-    num: "04",
+    num: "03",
     name: "The Directorate",
     badge: "Membership Platform · Stripe + Auth",
     description: [
@@ -53,7 +42,7 @@ const projects = [
     tags: ["Next.js", "Stripe", "Supabase", "Auth.js", "Webhooks", "Gated Content", "Row-Level Security"],
   },
   {
-    num: "05",
+    num: "04",
     name: "The Tire Chair",
     badge: "E-commerce · Conversion Optimization",
     description: [

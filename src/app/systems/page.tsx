@@ -21,7 +21,7 @@ const systems = [
     category: "Voice AI",
     name: "AI Receptionist System",
     description:
-      "Full inbound call-handling system that answers, qualifies, and routes calls without a human. Handles common questions, checks availability, and books appointments. After-hours calls are processed and flagged for staff follow-up. Built for Rustic Mountain Dental and designed to deploy across any service business.",
+      "Full inbound call-handling system that answers, qualifies, and routes calls without a human. Handles common questions, checks availability, and books appointments. After-hours calls are processed and flagged for staff follow-up. Designed to deploy across any service business.",
     tags: ["n8n", "Twilio Voice", "OpenAI", "Firestore", "Google Calendar"],
   },
   {
